@@ -350,3 +350,38 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+.contact .intro {
+  padding: 90px 0 10px;
+  border-bottom: 2px dashed #C0C0C0;
+}
+.contact .intro img {
+  max-width: 100%;
+  height: auto;
+}
+.contact .intro h2 {
+  margin-top: 20px;
+}
+.contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 200px;
+  margin: 20px auto;
+}
+.contact .contact-form h2 {
+  align-self: center;
+}
+.contact .contact-form .textarea {
+  resize: none;
+  height: 100px;
+}
+.contact .contact-form .send-btn {
+  width: 15%;
+  align-self: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+.contact .contact-form .send-btn:hover {
+  background: yellow;
+}

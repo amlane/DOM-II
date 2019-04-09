@@ -27,11 +27,6 @@ funBus.addEventListener('wheel', (event) => {
     event.target.setAttribute ("src", "img/fun-bus.jpg");
 })
 
-const textArea = document.querySelector('.text-area');
-
-
-
-
 const sendBtn = document.querySelector('button');
 sendBtn.addEventListener('click', (event) => {
     alert(`Your message has been sent!`);
