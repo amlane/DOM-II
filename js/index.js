@@ -21,9 +21,10 @@ const navLinks = document.querySelector('.nav');
 navLinks.addEventListener('mouseover', (event) => {
     if (event.target.tagName === "A") {
     event.target.style.textShadow = "2px 2px 2px orange";
-    setTimeout(function(){event.target.style.textShadow = "none"}, 500);
+    setTimeout(function(){event.target.style.textShadow = "none"}, 300);
     }
 })
+
 
 const funBus = document.querySelector('.fun-bus-img');
 funBus.addEventListener('dblclick', (event) => {
@@ -38,6 +39,14 @@ const subscribe = document.querySelector('input');
 subscribe.addEventListener('keydown', (event) => {
     console.log(`${event.key}`);
 })
+
+subscribe.addEventListener('focus', (event) => {
+    event.target.style.background = "yellow";
+}, true);
+
+subscribe.addEventListener('blur', (event) => {
+    event.target.style.background = '';    
+  }, true);
 
 const submitEmailBtn = document.querySelector('.subscribe');
 submitEmailBtn.addEventListener('click', (event) => {
