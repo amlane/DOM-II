@@ -94,10 +94,22 @@ home.addEventListener('mouseover', (event) => {
     }
 })
 
-home.addEventListener('dblclick', (event) => {
+window.addEventListener('dblclick', (event) => {
     event.target.style.background = "purple";
     setTimeout(function(){event.target.style.background = ""}, 5000);
 })
+
+const mainContain = document.querySelector('.home')
+
+mainContain.addEventListener('dblclick', (event) => {
+    event.stopPropagation();
+})
+
+const topBar = document.querySelector('.main-navigation');
+topBar.addEventListener('dblclick', (event) => {
+    event.stopPropagation();
+})
+
 
 
 
