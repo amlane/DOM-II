@@ -40,5 +40,21 @@
         text-decoration: none;
       }
     }
+  } 
+  .hidden {
+    height: 50%;
+    transform: translateX(-80%)
+  }
+
+  .slideRight {
+    animation-name: bus-in;
+    animation-duration: 3s;
+    height: 50%;
+    transform: translateX(90%)
+  }
+
+  @keyframes bus-in {
+    from {transform: translateX(-80%);}
+    to {transform: translateX(90%)}
   }
 } // .main-navigation

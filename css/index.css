@@ -215,6 +215,24 @@ img {
   color: #212529;
   text-decoration: none;
 }
+.main-navigation .hidden {
+  height: 50%;
+  transform: translateX(-80%);
+}
+.main-navigation .slideRight {
+  animation-name: bus-in;
+  animation-duration: 3s;
+  height: 50%;
+  transform: translateX(90%);
+}
+@keyframes bus-in {
+  from {
+    transform: translateX(-80%);
+  }
+  to {
+    transform: translateX(90%);
+  }
+}
 .footer {
   width: 100%;
   border-top: 2px dashed #C0C0C0;
@@ -366,10 +384,18 @@ img {
   flex-direction: column;
   justify-content: space-between;
   width: 60%;
-  height: 200px;
+  height: 340px;
   margin: 20px auto;
 }
 .contact .contact-form h2 {
+  align-self: center;
+}
+.contact .contact-form p {
+  align-self: center;
+}
+.contact .contact-form .dragndrop {
+  height: auto;
+  width: 60%;
   align-self: center;
 }
 .contact .contact-form .textarea {

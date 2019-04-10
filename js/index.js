@@ -1,4 +1,8 @@
+window.addEventListener('load', (event) => {
+    busInImg.classList.replace('hidden', 'slideRight')
+})
 
+const busInImg = document.querySelector('.hidden');
 
 const mainHeader = document.querySelector('h1');
 mainHeader.addEventListener('click', (event) => {
@@ -38,7 +42,7 @@ subscribe.addEventListener('focus', (event) => {
 }, true);
 
 subscribe.addEventListener('blur', (event) => {
-    event.target.style.background = '';    
+    event.target.style.background = "";    
   }, true);
 
 const submitEmailBtn = document.querySelector('.subscribe');

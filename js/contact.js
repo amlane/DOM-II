@@ -1,3 +1,8 @@
+window.addEventListener('load', (event) => {
+    busInImg.classList.replace('hidden', 'slideRight')
+})
+
+const busInImg = document.querySelector('.hidden');
 
 const mainHeader = document.querySelector('h1');
 mainHeader.addEventListener('click', (event) => {
@@ -30,4 +35,22 @@ funBus.addEventListener('wheel', (event) => {
 const sendBtn = document.querySelector('button');
 sendBtn.addEventListener('click', (event) => {
     alert(`Your message has been sent!`);
+    event.stopPropagation();
 });
+
+const selectText = document.querySelector('.textarea');
+selectText.addEventListener('select', (event) => {
+    alert(`This content is protected by copyright law. Copying this contact is a felony and will result in loss of limbs and your ISP.`);
+})
+
+var dragNDrop = document.querySelector('.dragndrop');
+dragNDrop.addEventListener('drag', (event) => {
+    console.log("You're a drag!");
+    event.preventDefault();
+}, false);
+
+selectText.addEventListener('drop', (event) => {
+    event.target.style.background = "black";
+    event.target.style.color = "white";
+    event.preventDefault();
+})
