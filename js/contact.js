@@ -2,6 +2,10 @@ window.addEventListener('load', (event) => {
     busInImg.classList.replace('hidden', 'slideRight')
 })
 
+window.addEventListener('resize', (event) => {
+    console.log(`You're resizing the window`);
+})
+
 const busInImg = document.querySelector('.hidden');
 
 const mainHeader = document.querySelector('h1');
@@ -16,6 +20,7 @@ mainHeader.addEventListener('click', (event) => {
 
 const navLinks = document.querySelector('.nav');
 navLinks.addEventListener('mouseover', (event) => {
+    event.preventDefault();
     if (event.target.tagName === "A") {
     event.target.style.textShadow = "2px 2px 2px orange";
     setTimeout(function(){event.target.style.textShadow = "none"}, 300);
@@ -46,7 +51,6 @@ selectText.addEventListener('select', (event) => {
 var dragNDrop = document.querySelector('.dragndrop');
 dragNDrop.addEventListener('drag', (event) => {
     console.log("You're a drag!");
-    event.preventDefault();
 }, false);
 
 selectText.addEventListener('drop', (event) => {
@@ -54,3 +58,5 @@ selectText.addEventListener('drop', (event) => {
     event.target.style.color = "white";
     event.preventDefault();
 })
+
+
